@@ -1,0 +1,16 @@
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap");
+@import "./button";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
