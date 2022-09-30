@@ -1,7 +1,9 @@
-import weather from "../../resources/img/weather.png";
+import weatherImg from "../../resources/img/weather.png";
 import "./weather.scss";
 
-const Weather = () => {
+const Weather = (props) => {
+  const { weather } = props;
+
   return (
     <div className="weather">
       <div className="head">
@@ -9,13 +11,31 @@ const Weather = () => {
           Яка погода <br /> очікується?
         </h2>
         <div className="btn_group">
-          <button className="button button__small">Ясно</button>
-          <button className="button button__small">Дощ</button>
-          <button className="button button__small">Сніг</button>
+          <button
+            onClick={() => props.changeWeather("sunny")}
+            disabled={weather === "sunny" ? true : false}
+            className="button button__small"
+          >
+            Ясно
+          </button>
+          <button
+            onClick={() => props.changeWeather("rain")}
+            disabled={weather === "rain" ? true : false}
+            className="button button__small"
+          >
+            Дощ
+          </button>
+          <button
+            onClick={() => props.changeWeather("snow")}
+            disabled={weather === "snow" ? true : false}
+            className="button button__small"
+          >
+            Сніг
+          </button>
         </div>
       </div>
 
-      <img src={weather} alt="Weather img" />
+      <img src={weatherImg} alt="Weather img" />
       <div className="btn_nav_group">
         <button className="button button__big">
           <a href="/duration">Погнали далі</a>

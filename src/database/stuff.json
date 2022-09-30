@@ -1,0 +1,31 @@
+{
+  "stuff": [
+    {
+      "name": "Намет",
+      "season": ["winter", "spring", "summer", "autumn"],
+      "weather": ["sunny", "rain", "snow"],
+      "duration": ["2-3 days", "over 3 days"]
+    },
+
+    {
+      "name": "Ліхтарик",
+      "season": ["winter", "spring", "summer", "autumn"],
+      "weather": ["sunny", "rain", "snow"],
+      "duration": ["2-3 days", "over 3 days"]
+    },
+
+    {
+      "name": "Спальний мішок",
+      "season": ["winter", "spring", "summer", "autumn"],
+      "weather": ["sunny", "rain", "snow"],
+      "duration": ["2-3 days", "over 3 days"]
+    },
+
+    {
+      "name": "Гамак",
+      "season": ["spring", "summer", "autumn"],
+      "weather": ["sunny"],
+      "duration": ["1 day", "2-3 days", "over 3 days"]
+    }
+  ]
+}
