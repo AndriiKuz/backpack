@@ -1,4 +1,5 @@
 import durationImg from "../../resources/img/duration.png";
+import topLogo from "../../resources/img/toplogo.svg";
 import "./duration.scss";
 
 const Duration = (props) => {
@@ -7,6 +8,7 @@ const Duration = (props) => {
   return (
     <div className="duration">
       <div className="head">
+        <img className="top-logo" src={topLogo} alt="Top logo" />
         <h2>
           Яка тривалість <br /> походу?
         </h2>

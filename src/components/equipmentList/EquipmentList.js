@@ -1,9 +1,11 @@
+import topLogo from "../../resources/img/toplogo.svg";
 import "./equipmentList.scss";
 
 const EquipmentList = (props) => {
   return (
     <div className="equipment">
       <div className="head">
+        <img className="top-logo" src={topLogo} alt="Top logo" />
         <h2>
           Рекомендоване
           <br /> спорядження
@@ -17,7 +19,7 @@ const EquipmentList = (props) => {
           className="button button__big"
           onClick={() => props.onSwitchComponent("main")}
         >
-          Гори кличуть
+          Готово
         </button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import weatherImg from "../../resources/img/weather.png";
+import topLogo from "../../resources/img/toplogo.svg";
 import "./weather.scss";
 
 const Weather = (props) => {
@@ -7,6 +8,7 @@ const Weather = (props) => {
   return (
     <div className="weather">
       <div className="head">
+        <img className="top-logo" src={topLogo} alt="Top logo" />
         <h2>
           Яка погода <br /> очікується?
         </h2>
