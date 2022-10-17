@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: center;
   width: 100vh;
-  height: 100vh;
   padding: 50px auto;
 
   & .head {
@@ -49,5 +48,6 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-bottom: 100px;
   }
 }
