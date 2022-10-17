@@ -12,21 +12,21 @@ const Weather = (props) => {
         </h2>
         <div className="btn_group">
           <button
-            onClick={() => props.changeWeather("sunny")}
+            onClick={() => props.changeData("weather", "sunny")}
             disabled={weather === "sunny" ? true : false}
             className="button button__small"
           >
             Ясно
           </button>
           <button
-            onClick={() => props.changeWeather("rain")}
+            onClick={() => props.changeData("weather", "rain")}
             disabled={weather === "rain" ? true : false}
             className="button button__small"
           >
             Дощ
           </button>
           <button
-            onClick={() => props.changeWeather("snow")}
+            onClick={() => props.changeData("weather", "snow")}
             disabled={weather === "snow" ? true : false}
             className="button button__small"
           >
@@ -37,11 +37,17 @@ const Weather = (props) => {
 
       <img src={weatherImg} alt="Weather img" />
       <div className="btn_nav_group">
-        <button className="button button__big">
-          <a href="/duration">Погнали далі</a>
+        <button
+          className="button button__big"
+          onClick={() => props.onSwitchComponent("duration")}
+        >
+          Погнали далі
         </button>
-        <button className="button button__back button__big">
-          <a href="/season">Повернутися назад</a>
+        <button
+          className="button button__back button__big"
+          onClick={() => props.onSwitchComponent("season")}
+        >
+          Повернутися назад
         </button>
       </div>
     </div>

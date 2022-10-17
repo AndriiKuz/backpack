@@ -12,14 +12,14 @@ const Duration = (props) => {
         </h2>
         <div className="btn_group">
           <button
-            onClick={() => props.changeDuration("1 day")}
+            onClick={() => props.changeData("duration", "1 day")}
             disabled={duration === "1 day" ? true : false}
             className="button button__small"
           >
             1 день
           </button>
           <button
-            onClick={() => props.changeDuration("2-3 days")}
+            onClick={() => props.changeData("duration", "2-3 days")}
             disabled={duration === "2-3 days" ? true : false}
             className="button button__small"
           >
@@ -27,7 +27,7 @@ const Duration = (props) => {
           </button>
           <button
             onClick={() => {
-              props.changeDuration("over 3 days");
+              props.changeData("duration", "over 3 days");
             }}
             disabled={duration === "over 3 days" ? true : false}
             className="button button__small"
@@ -39,11 +39,17 @@ const Duration = (props) => {
 
       <img src={durationImg} alt="Duration img" />
       <div className="btn_nav_group">
-        <button className="button button__big">
-          <a href="/stuff-list">Погнали далі</a>
+        <button
+          className="button button__big"
+          onClick={() => props.onSwitchComponent("equipment list")}
+        >
+          Погнали далі
         </button>
-        <button className="button button__back button__big">
-          <a href="/weather">Повернутися назад</a>
+        <button
+          className="button button__back button__big"
+          onClick={() => props.onSwitchComponent("weather")}
+        >
+          Повернутися назад
         </button>
       </div>
     </div>

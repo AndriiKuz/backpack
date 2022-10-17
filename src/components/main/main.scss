@@ -8,24 +8,48 @@
   width: 100vh;
   height: 100vh;
   padding: 50px auto;
-  .logo {
-    text-align: center;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 100%;
-    color: $text_dark;
-    margin: 50px auto 96px auto;
-  }
-  & h1 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 120%;
-    text-align: center;
-    color: $text_dark;
-  }
+
   & img {
-    height: 328px;
-    width: 328px;
+    margin: 215px auto 110px auto;
+
+    animation-name: bounceIn;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+  }
+
+  & button {
+    animation: manifestation 2.5s forwards;
+    animation-delay: 3s;
+    opacity: 0;
+  }
+
+  @keyframes manifestation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    15% {
+      transform: translateY(0);
+      padding-bottom: 5px;
+    }
+    30% {
+      transform: translateY(-50%);
+    }
+    40% {
+      transform: translateY(0%);
+      padding-bottom: 6px;
+    }
+    50% {
+      transform: translateY(-30%);
+    }
   }
 }

@@ -1,21 +1,22 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 import Main from "../components/main/Main";
 import Season from "../components/season/Season";
 import Weather from "../components/weather/Weather";
 import Duration from "../components/duration/Duration";
-import StuffList from "../components/stuffList/StuffList";
-import stuff from "../database/stuff.json";
-
+import EquipmentList from "../components/equipmentList/EquipmentList";
+import equipmentDB from "../equipment.json";
 import "./app.scss";
 
 const App = () => {
-  const stuffDB = stuff;
-
   const [season, setSeason] = useState("winter");
   const [weather, setWeather] = useState("sunny");
   const [duration, setDuration] = useState("1 day");
+  const [component, setComponent] = useState("main");
+
+  const onSwitchComponent = (component) => {
+    setComponent(component);
+  };
 
   useEffect(() => {
     setSeason(localStorage.getItem("season"));
@@ -23,69 +24,59 @@ const App = () => {
     setDuration(localStorage.getItem("duration"));
   }, [season, weather, duration]);
 
-  const changeSeason = (season) => {
-    localStorage.setItem("season", season);
-    setSeason(localStorage.getItem("season"));
+  const changeData = (key, value) => {
+    localStorage.setItem(`${key}`, value);
+    setSeason(localStorage.getItem(`${key}`));
   };
 
-  const changeWeather = (weather) => {
-    localStorage.setItem("weather", weather);
-    setWeather(localStorage.getItem("weather"));
-  };
-
-  const changeDuration = (duration) => {
-    localStorage.setItem("duration", duration);
-    setDuration(localStorage.getItem("weather"));
-  };
-
-  const changeStuffList = () => {
-    const stuffList = [];
-
-    stuffDB.stuff
+  const changeEquipmentList = () => {
+    return equipmentDB.equipment
       .filter(
         (elem) =>
           elem.season.includes(season) &&
           elem.weather.includes(weather) &&
           elem.duration.includes(duration)
       )
-      .map((item, id) =>
-        stuffList.push(
-          <li key={id} className="list-item">
-            {item.name}
-          </li>
-        )
-      );
-    return stuffList;
+      .map((item, id) => (
+        <li key={id} className="list-item">
+          {item.name}
+        </li>
+      ));
   };
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route
-            path="/season"
-            element={<Season changeSeason={changeSeason} season={season} />}
-          />
-          <Route
-            path="/weather"
-            element={
-              <Weather changeWeather={changeWeather} weather={weather} />
-            }
-          />
-          <Route
-            path="/duration"
-            element={
-              <Duration changeDuration={changeDuration} duration={duration} />
-            }
-          />
-          <Route
-            path="/stuff-list"
-            element={<StuffList changeStuffList={changeStuffList} />}
-          />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      {component === "main" ? (
+        <Main onSwitchComponent={onSwitchComponent} />
+      ) : null}
+      {component === "season" ? (
+        <Season
+          onSwitchComponent={onSwitchComponent}
+          changeData={changeData}
+          season={season}
+        />
+      ) : null}
+      {component === "weather" ? (
+        <Weather
+          onSwitchComponent={onSwitchComponent}
+          changeData={changeData}
+          weather={weather}
+        />
+      ) : null}
+      {component === "duration" ? (
+        <Duration
+          onSwitchComponent={onSwitchComponent}
+          changeData={changeData}
+          duration={duration}
+        />
+      ) : null}
+      {component === "equipment list" ? (
+        <EquipmentList
+          onSwitchComponent={onSwitchComponent}
+          changeEquipmentList={changeEquipmentList}
+        />
+      ) : null}
+    </div>
   );
 };
 
