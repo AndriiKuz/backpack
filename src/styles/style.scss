@@ -20,11 +20,6 @@
   overflow-y: auto;
 }
 
-.slide-left {
-  animation: slideleft 1s forwards;
-  animation-delay: 0s;
-}
-
 .fall-down {
   animation: falldown 1s forwards;
   animation-delay: 0.1s;
@@ -42,6 +37,11 @@
   }
 }
 
+.slide-left {
+  animation: slideleft 1s forwards;
+  animation-delay: 0s;
+}
+
 @keyframes slideleft {
   0% {
     margin-right: 100%;
@@ -49,5 +49,47 @@
 
   100% {
     margin-right: 0%;
+  }
+}
+
+.manifestation {
+  animation: manifestation 2.5s forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+@keyframes manifestation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bounce-in {
+  animation-name: bounceIn;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    transform: translateY(0);
+    padding-bottom: 5px;
+  }
+  30% {
+    transform: translateY(-50%);
+  }
+  40% {
+    transform: translateY(0%);
+    padding-bottom: 6px;
+  }
+  50% {
+    transform: translateY(-30%);
   }
 }

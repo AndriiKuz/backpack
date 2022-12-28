@@ -1,19 +1,21 @@
 import cn from "classnames";
 import { useEffect, useState } from "react";
-import topLogo from "../../resources/img/toplogo.svg";
-import winterImg from "../../resources/img/winter.svg";
-import winterBg from "../../resources/img/winterbackground.svg";
-import springImg from "../../resources/img/spring.svg";
-import springBg from "../../resources/img/springbackground.svg";
-import summerImg from "../../resources/img/summer.svg";
-import summerBg from "../../resources/img/summerbackground.svg";
-import autumnImg from "../../resources/img/autumn.svg";
-import autumnBg from "../../resources/img/autumnbackground.svg";
+import TopLogo from "../topLogo/TopLogo";
+import Options from "../options/Options";
+import winterImg from "../../resources/img/winter.png";
+import winterBg from "../../resources/img/winter-bg.png";
+import springImg from "../../resources/img/spring.png";
+import springBg from "../../resources/img/spring-bg.png";
+import summerImg from "../../resources/img/summer.png";
+import summerBg from "../../resources/img/summer-bg.png";
+import autumnImg from "../../resources/img/autumn.png";
+import autumnBg from "../../resources/img/autumn-bg.png";
 import "./season.scss";
 
-const Season = (props) => {
+const Season = ({ season, changeData, onSwitchComponent }) => {
   const [isActive, setIsActive] = useState(null);
-  const { season } = props;
+  const compName = "season";
+  const options = ["Зима", "Весна", "Літо", "Осінь"];
 
   useEffect(() => {
     setIsActive(true);
@@ -24,74 +26,38 @@ const Season = (props) => {
       <img
         className={cn("season-bg", { "fall-down": isActive })}
         src={
-          season === "winter"
+          season === "Зима"
             ? winterBg
-            : season === "spring"
+            : season === "Весна"
             ? springBg
-            : season === "summer"
+            : season === "Літо"
             ? summerBg
             : autumnBg
         }
         alt="Season background"
       />
       <div className="head">
-        <img className="top-logo" src={topLogo} alt="Top logo" />
-
+        <TopLogo onSwitchComponent={onSwitchComponent} />
         <h2>
           Який сезон <br /> оберете?
         </h2>
-        <div className="btn_group">
-          <button
-            onClick={() => {
-              props.changeData("season", "winter");
-              setIsActive(false);
-            }}
-            disabled={season === "winter" ? true : false}
-            className="button button__small"
-          >
-            Зима
-          </button>
-          <button
-            onClick={() => {
-              props.changeData("season", "spring");
-              setIsActive(false);
-            }}
-            disabled={season === "spring" ? true : false}
-            className="button button__small"
-          >
-            Весна
-          </button>
-          <button
-            onClick={() => {
-              props.changeData("season", "summer");
-              setIsActive(false);
-            }}
-            disabled={season === "summer" ? true : false}
-            className="button button__small"
-          >
-            Літо
-          </button>
-          <button
-            onClick={() => {
-              props.changeData("season", "autumn");
-              setIsActive(false);
-            }}
-            disabled={season === "autumn" ? true : false}
-            className="button button__small"
-          >
-            Осінь
-          </button>
-        </div>
+        <Options
+          setIsActive={setIsActive}
+          compState={season}
+          changeData={changeData}
+          compName={compName}
+          options={options}
+        />
       </div>
 
       <img
         className={cn("season-img", { "slide-left": isActive })}
         src={
-          season === "winter"
+          season === "Зима"
             ? winterImg
-            : season === "spring"
+            : season === "Весна"
             ? springImg
-            : season === "summer"
+            : season === "Літо"
             ? summerImg
             : autumnImg
         }
@@ -100,13 +66,13 @@ const Season = (props) => {
       <div className="btn_nav_group">
         <button
           className="button button__big"
-          onClick={() => props.onSwitchComponent("weather")}
+          onClick={() => onSwitchComponent("weather")}
         >
           Погнали далі
         </button>
         <button
           className="button button__back button__big"
-          onClick={() => props.onSwitchComponent("main")}
+          onClick={() => onSwitchComponent("main")}
         >
           Повернутися назад
         </button>

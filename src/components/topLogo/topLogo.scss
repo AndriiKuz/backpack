@@ -1,0 +1,13 @@
+.home {
+  z-index: 1;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+
+  & .top-logo {
+    margin: 40px auto 18px auto;
+    width: 208px;
+    height: auto;
+  }
+}

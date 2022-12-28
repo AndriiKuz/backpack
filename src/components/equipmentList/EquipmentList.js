@@ -1,7 +1,7 @@
 import topLogo from "../../resources/img/toplogo.svg";
 import "./equipmentList.scss";
 
-const EquipmentList = (props) => {
+const EquipmentList = ({ changeEquipmentList, onSwitchComponent }) => {
   return (
     <div className="equipment">
       <div className="head">
@@ -12,14 +12,20 @@ const EquipmentList = (props) => {
         </h2>
       </div>
 
-      <ul className="equipment-list">{props.changeEquipmentList()}</ul>
+      <ul className="equipment-list">{changeEquipmentList()}</ul>
 
       <div className="btn_nav_group">
         <button
           className="button button__big"
-          onClick={() => props.onSwitchComponent("main")}
+          onClick={() => onSwitchComponent("backpack")}
         >
-          Готово
+          Перевірити рюкзак
+        </button>
+        <button
+          className="button button__back button__big"
+          onClick={() => onSwitchComponent("duration")}
+        >
+          Повернутися назад
         </button>
       </div>
     </div>

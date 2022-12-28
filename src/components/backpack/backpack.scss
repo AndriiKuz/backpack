@@ -1,6 +1,6 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
-.equipment {
+.backpack {
   background: $gradient;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
     }
   }
 
-  & .equipment-list {
+  & .backpack-list {
     list-style: none;
     width: 100%;
     display: flex;
@@ -46,17 +46,11 @@
     max-width: 320px;
     overflow-y: scroll;
 
-    & .list-item {
-      width: 100%;
+    & .equipment-name {
       display: flex;
       justify-content: center;
-    }
-
-    & .list-btn {
-      width: 100%;
-      cursor: pointer;
+      align-items: center;
       background: $list_item;
-      border: none;
       border-radius: 10px;
       font-style: normal;
       font-weight: 500;
@@ -64,16 +58,20 @@
       line-height: 120%;
       color: $text_dark;
       padding: 10px;
-      transition: all 0.5s;
-
-      &.active {
-        background: $list_item_active;
-        color: $text_light;
-      }
+      width: 100%;
+      margin-right: 16px;
+    }
+    & .list-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
-
-  & .btn_nav_group {
+  // & .button {
+  //   margin-bottom: 100px;
+  // }
+  .btn_nav_group {
     display: flex;
     flex-direction: column;
     align-items: center;

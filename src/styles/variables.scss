@@ -1,11 +1,14 @@
-$gradient: linear-gradient(168.56deg, #028585 -4.67%, #000125 105.67%);
+$gradient: linear-gradient(168.56deg, #028585 -4.67%, #002332 105.67%);
 $text_dark: #1e1e1e;
 $text_light: #ffffff;
 $btn: #1cd5e8;
-$btn_hover: #165960;
+$list_item_active: #102628b4;
+$btn_hover: #195f67;
 $list_item: #c8faff;
-$winter_bg: linear-gradient(
-  172.64deg,
-  #3f8eeb -4.98%,
-  rgba(23, 78, 141, 0) 88.82%
-);
+$list_item_trans: hsla(185, 100%, 89%, 0.3);
+$delete: #ff1f00;
+// $Зима_bg: linear-gradient(
+//   172.64deg,
+//   #3f8eeb -4.98%,
+//   rgba(23, 78, 141, 0) 88.82%
+// );

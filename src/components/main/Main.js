@@ -1,14 +1,13 @@
 import backpack from "../../resources/img/backpack.png";
 import "./main.scss";
 
-const Main = (props) => {
+const Main = ({ onSwitchComponent }) => {
   return (
     <div className="main">
-      <img src={backpack} alt="Main img" />
-
+      <img className="bounce-in" src={backpack} alt="Main img" />
       <button
-        className="button button__big"
-        onClick={() => props.onSwitchComponent("season")}
+        className="button button__big manifestation"
+        onClick={() => onSwitchComponent("season")}
       >
         Гори кличуть
       </button>

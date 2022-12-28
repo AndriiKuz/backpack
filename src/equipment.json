@@ -2,177 +2,177 @@
   "equipment": [
     {
       "name": "Намет",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Спальний мішок",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Карімат / килимок",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Ліхтарик",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Гамак",
-      "season": ["spring", "summer", "autumn"],
-      "weather": ["sunny"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Сідачка",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Чашка",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Миска",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Вилка / ложка",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Ніж",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Пальник / інтег. система",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Газовий балон",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Фляга / питна система",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Їжа для походу",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Сонцезахисні засоби",
-      "season": ["summer"],
-      "weather": ["sunny"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Літо"],
+      "weather": ["Ясно"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Медично-рятувальні засоби",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Засоби гігієни",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Дощовик",
-      "season": ["spring", "summer", "autumn"],
-      "weather": ["rain"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Весна", "Літо", "Осінь"],
+      "weather": ["Хмарно", "Дощ"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Трекенгові палиці",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Малий рюкзак",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Сонцезахисні окуляри",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Термобілизна",
-      "season": ["winter", "spring", "summer", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Літо", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Теплий одяг",
-      "season": ["winter", "spring", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Весна", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Вітрівка",
-      "season": ["summer", "spring", "autumn"],
-      "weather": ["sunny", "rain"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Літо", "Весна", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     },
 
     {
       "name": "Повербанк",
-      "season": ["winter", "summer", "spring", "autumn"],
-      "weather": ["sunny", "rain", "snow"],
-      "duration": ["1 day", "2-3 days", "over 3 days"]
+      "season": ["Зима", "Літо", "Весна", "Осінь"],
+      "weather": ["Ясно", "Хмарно", "Дощ", "Сніг"],
+      "duration": ["1 день", "2-3 дні", "> 3 днів"]
     }
   ]
 }
