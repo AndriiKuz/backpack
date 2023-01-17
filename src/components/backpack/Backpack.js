@@ -1,11 +1,11 @@
-import topLogo from '../../resources/img/toplogo.svg';
+import TopLogo from '../topLogo/TopLogo';
 import './backpack.scss';
 
-const Backpack = ({ checkBackpack, onSwitchComponent }) => {
+const Backpack = ({ checkBackpack, onSwitchComponent, equipArr }) => {
   return (
     <div className="backpack">
       <div className="head">
-        <img className="top-logo" src={topLogo} alt="Top logo" />
+        <TopLogo onSwitchComponent={onSwitchComponent} />
         <h2>
           Перевір свій
           <br /> рюкзак
@@ -16,8 +16,9 @@ const Backpack = ({ checkBackpack, onSwitchComponent }) => {
 
       <div className="btn_nav_group">
         <button
+          disabled={!equipArr.length}
           className="button button__big"
-          onClick={() => onSwitchComponent('main')}
+          onClick={() => onSwitchComponent('done')}
         >
           Вирушаймо!
         </button>

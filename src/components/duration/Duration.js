@@ -1,16 +1,16 @@
-import cn from "classnames";
-import { useEffect, useState } from "react";
-import TopLogo from "../topLogo/TopLogo";
-import Options from "../options/Options";
-import oneDayImg from "../../resources/img/1day.png";
-import twoDaysImg from "../../resources/img/2-3days.png";
-import overThreeDaysImg from "../../resources/img/over3days.png";
-import "./duration.scss";
+import cn from 'classnames';
+import { useEffect, useState } from 'react';
+import TopLogo from '../topLogo/TopLogo';
+import Options from '../options/Options';
+import oneDayImg from '../../resources/img/1day.png';
+import twoDaysImg from '../../resources/img/2-3days.png';
+import overThreeDaysImg from '../../resources/img/over3days.png';
+import './duration.scss';
 
 const Duration = ({ duration, changeData, onSwitchComponent }) => {
   const [isActive, setIsActive] = useState(null);
-  const compName = "duration";
-  const options = ["1 день", "2-3 дні", "> 3 днів"];
+  const compName = 'duration';
+  const options = ['1 день', '2-3 дні', '> 3 днів'];
 
   useEffect(() => {
     setIsActive(true);
@@ -32,11 +32,11 @@ const Duration = ({ duration, changeData, onSwitchComponent }) => {
         />
       </div>
       <img
-        className={cn("duration-img", { "slide-left": isActive })}
+        className={cn('duration-img', { 'manifestation-img': isActive })}
         src={
-          duration === "1 день"
+          duration === '1 день'
             ? oneDayImg
-            : duration === "2-3 дні"
+            : duration === '2-3 дні'
             ? twoDaysImg
             : overThreeDaysImg
         }
@@ -45,13 +45,13 @@ const Duration = ({ duration, changeData, onSwitchComponent }) => {
       <div className="btn_nav_group">
         <button
           className="button button__big"
-          onClick={() => onSwitchComponent("equipment list")}
+          onClick={() => onSwitchComponent('equipment list')}
         >
           Погнали далі
         </button>
         <button
           className="button button__back button__big"
-          onClick={() => onSwitchComponent("weather")}
+          onClick={() => onSwitchComponent('weather')}
         >
           Повернутися назад
         </button>

@@ -1,34 +1,41 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Main from '../components/main/Main';
 import Season from '../components/season/Season';
 import Weather from '../components/weather/Weather';
 import Duration from '../components/duration/Duration';
 import EquipmentList from '../components/equipmentList/EquipmentList';
+import EquipmentListItem from '../components/equipmentListItem/EquipmentListItem';
 import Backpack from '../components/backpack/Backpack';
+import BackpackListItem from '../components/backpackListItem/BackpackListItem';
+import Done from '../components/done/Done';
 import equipmentDB from '../equipment.json';
-import trash from '../../src/resources/img/trash.svg';
+
 import './app.scss';
 
 const App = () => {
   const [season, setSeason] = useState('Зима');
-  const [weather, setWeather] = useState('sunny');
-  const [duration, setDuration] = useState('1 day');
+  const [weather, setWeather] = useState('Ясно');
+  const [duration, setDuration] = useState('1 день');
   const [component, setComponent] = useState('main');
   const [equipArr, setEquipArr] = useState([]);
-
-  useEffect(() => {
-    setSeason(localStorage.getItem('season'));
-    setWeather(localStorage.getItem('weather'));
-    setDuration(localStorage.getItem('duration'));
-  }, [season, weather, duration]);
 
   const onSwitchComponent = (component) => {
     setComponent(component);
   };
 
-  const changeData = (key, value) => {
-    localStorage.setItem(`${key}`, value);
-    setSeason(localStorage.getItem(`${key}`));
+  const changeData = (compName, item) => {
+    switch (compName) {
+      case 'season':
+        setSeason(item);
+        break;
+      case 'weather':
+        setWeather(item);
+        break;
+      case 'duration':
+        setDuration(item);
+        break;
+      default:
+    }
   };
 
   const changeEquipmentList = () => {
@@ -40,16 +47,13 @@ const App = () => {
           elem.duration.includes(duration)
       )
       .map((item, id) => (
-        <li key={id} id={item.name} className="list-item">
-          <button
-            className={
-              equipArr.includes(item.name) ? 'list-btn active' : 'list-btn'
-            }
-            onClick={(e) => moveEquipToBackpack(e, item.name)}
-          >
-            {item.name}
-          </button>
-        </li>
+        <EquipmentListItem
+          key={id}
+          id={id}
+          item={item}
+          equipArr={equipArr}
+          moveEquipToBackpack={moveEquipToBackpack}
+        />
       ));
   };
 
@@ -70,68 +74,79 @@ const App = () => {
   };
 
   const checkBackpack = () => {
-    return equipArr.length ? (
-      equipArr.map((item, id) => (
-        <li key={id} id={item} className="list-item">
-          <p className="equipment-name">{item}</p>
-
-          <button className="button button__delete">
-            <img
-              className="trash-icon"
-              src={trash}
-              onClick={() => delEquipFromBackpack(item)}
-              alt="Trash icon"
-            />
-          </button>
+    if (equipArr.length) {
+      return equipArr.map((item, id) => (
+        <BackpackListItem
+          key={id}
+          item={item}
+          delEquipFromBackpack={delEquipFromBackpack}
+        />
+      ));
+    } else {
+      return (
+        <li key={'empty'} id={'empty'} className="list-item">
+          <p className="equipment-name">Рюкзак порожній</p>
         </li>
-      ))
-    ) : (
-      <li key={'empty'} id={'empty'} className="list-item">
-        <p className="equipment-name">Рюкзак порожній</p>
-      </li>
-    );
+      );
+    }
   };
 
-  return (
-    <div className="App">
-      {component === 'main' ? (
-        <Main onSwitchComponent={onSwitchComponent} />
-      ) : null}
-      {component === 'season' ? (
-        <Season
-          onSwitchComponent={onSwitchComponent}
-          changeData={changeData}
-          season={season}
-        />
-      ) : null}
-      {component === 'weather' ? (
-        <Weather
-          onSwitchComponent={onSwitchComponent}
-          changeData={changeData}
-          weather={weather}
-        />
-      ) : null}
-      {component === 'duration' ? (
-        <Duration
-          onSwitchComponent={onSwitchComponent}
-          changeData={changeData}
-          duration={duration}
-        />
-      ) : null}
-      {component === 'equipment list' ? (
-        <EquipmentList
-          onSwitchComponent={onSwitchComponent}
-          changeEquipmentList={() => changeEquipmentList()}
-        />
-      ) : null}
-      {component === 'backpack' ? (
-        <Backpack
-          onSwitchComponent={onSwitchComponent}
-          checkBackpack={checkBackpack}
-        />
-      ) : null}
-    </div>
-  );
+  const render = () => {
+    switch (component) {
+      case 'main':
+        return <Main onSwitchComponent={onSwitchComponent} />;
+
+      case 'season':
+        return (
+          <Season
+            onSwitchComponent={onSwitchComponent}
+            changeData={changeData}
+            season={season}
+          />
+        );
+      case 'weather':
+        return (
+          <Weather
+            onSwitchComponent={onSwitchComponent}
+            changeData={changeData}
+            weather={weather}
+          />
+        );
+      case 'duration':
+        return (
+          <Duration
+            onSwitchComponent={onSwitchComponent}
+            changeData={changeData}
+            duration={duration}
+          />
+        );
+
+      case 'equipment list':
+        return (
+          <EquipmentList
+            onSwitchComponent={onSwitchComponent}
+            changeEquipmentList={() => changeEquipmentList()}
+          />
+        );
+
+      case 'backpack':
+        return (
+          <Backpack
+            onSwitchComponent={onSwitchComponent}
+            checkBackpack={checkBackpack}
+            equipArr={equipArr}
+          />
+        );
+      case 'done':
+        return <Done onSwitchComponent={onSwitchComponent} />;
+
+      default:
+    }
+  };
+
+  const renderComponent = render();
+
+  return <div className="App">{renderComponent}</div>;
 };
 
 export default App;

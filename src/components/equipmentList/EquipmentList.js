@@ -1,15 +1,12 @@
-import topLogo from "../../resources/img/toplogo.svg";
-import "./equipmentList.scss";
+import TopLogo from '../topLogo/TopLogo';
+import './equipmentList.scss';
 
 const EquipmentList = ({ changeEquipmentList, onSwitchComponent }) => {
   return (
     <div className="equipment">
       <div className="head">
-        <img className="top-logo" src={topLogo} alt="Top logo" />
-        <h2>
-          Рекомендоване
-          <br /> спорядження
-        </h2>
+        <TopLogo onSwitchComponent={onSwitchComponent} />
+        <h2>Обери що покласти в рюкзак</h2>
       </div>
 
       <ul className="equipment-list">{changeEquipmentList()}</ul>
@@ -17,13 +14,13 @@ const EquipmentList = ({ changeEquipmentList, onSwitchComponent }) => {
       <div className="btn_nav_group">
         <button
           className="button button__big"
-          onClick={() => onSwitchComponent("backpack")}
+          onClick={() => onSwitchComponent('backpack')}
         >
           Перевірити рюкзак
         </button>
         <button
           className="button button__back button__big"
-          onClick={() => onSwitchComponent("duration")}
+          onClick={() => onSwitchComponent('duration')}
         >
           Повернутися назад
         </button>

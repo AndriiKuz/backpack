@@ -1,8 +1,9 @@
-import "./options.scss";
+import './options.scss';
 
 const Options = ({ setIsActive, changeData, compState, compName, options }) => {
   const buttons = options.map((item) => (
     <button
+      key={item}
       className="button button__small"
       disabled={compState === item ? true : false}
       onClick={() => {
