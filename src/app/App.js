@@ -19,6 +19,13 @@ const App = () => {
   const [component, setComponent] = useState('main');
   const [equipArr, setEquipArr] = useState([]);
 
+  const resetData = () => {
+    setSeason('Зима');
+    setWeather('Ясно');
+    setDuration('1 день');
+    setEquipArr([]);
+  };
+
   const onSwitchComponent = (component) => {
     setComponent(component);
   };
@@ -135,6 +142,7 @@ const App = () => {
             onSwitchComponent={onSwitchComponent}
             checkBackpack={checkBackpack}
             equipArr={equipArr}
+            resetData={resetData}
           />
         );
       case 'done':

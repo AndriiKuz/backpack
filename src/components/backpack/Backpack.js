@@ -1,7 +1,12 @@
 import TopLogo from '../topLogo/TopLogo';
 import './backpack.scss';
 
-const Backpack = ({ checkBackpack, onSwitchComponent, equipArr }) => {
+const Backpack = ({
+  checkBackpack,
+  onSwitchComponent,
+  equipArr,
+  resetData,
+}) => {
   return (
     <div className="backpack">
       <div className="head">
@@ -18,7 +23,10 @@ const Backpack = ({ checkBackpack, onSwitchComponent, equipArr }) => {
         <button
           disabled={!equipArr.length}
           className="button button__big"
-          onClick={() => onSwitchComponent('done')}
+          onClick={() => {
+            onSwitchComponent('done');
+            resetData();
+          }}
         >
           Вирушаймо!
         </button>
