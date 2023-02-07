@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 #root {
@@ -15,6 +14,10 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  overflow: hidden;
 }
 
 .fall-down {
